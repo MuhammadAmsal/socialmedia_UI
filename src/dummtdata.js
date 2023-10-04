@@ -1,22 +1,22 @@
 export const Users=[
     {
         id:1,
-        profilePicture:"/assets/persons/Capture2.PNG",
+        profilePicture:"persons/Capture2.PNG",
         username:"John"
     },
     {
         id:2,
-        profilePicture:"/assets/persons/Capture.PNG",
+        profilePicture:"persons/Capture.PNG",
         username:"Sierra"
     },
     {
         id:3,
-        profilePicture:"/assets/persons/Capture3.PNG",
+        profilePicture:"persons/Capture3.PNG",
         username:"Micheal"
     },
     {
         id:4,
-        profilePicture:"/assets/persons/Capture4.PNG",
+        profilePicture:"persons/Capture4.PNG",
         username:"Henry"
     },
 ]
@@ -25,7 +25,7 @@ export const Posts=[
     {
         id:1,
         desc:'Hey its my first post',
-        photo:'/assets/posts/Capture2.PNG',
+        photo:'posts/Capture2.PNG',
         date:'4 min ago',
         userId:1,
         likes:14,
@@ -33,7 +33,7 @@ export const Posts=[
     },
     {
         id:2,
-        photo:'/assets/posts/Capture.PNG',
+        photo:'posts/Capture.PNG',
         date:'16 min ago',
         userId:2,
         likes:34,
@@ -42,7 +42,7 @@ export const Posts=[
     {
         id:3,
         desc:'Hey its my second post',
-        photo:'/assets/posts/pexels-photo-1496372.jpeg',
+        photo:'posts/pexels-photo-1496372.jpeg',
         date:'2 hours ago',
         userId:3,
         likes:46,
@@ -51,7 +51,7 @@ export const Posts=[
     {
         id:4,
         desc:'Hey its my third post',
-        photo:'/assets/posts/pexels-photo-1651165.jpeg',
+        photo:'posts/pexels-photo-1651165.jpeg',
         date:'30 min ago',
         userId:4,
         likes:5,
