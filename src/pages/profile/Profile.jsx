@@ -21,7 +21,7 @@ export default function Profile() {
     fetchUsers();
   
   },[userName])
-  const imageUrl = user.profilePicture === " " ?  `${PF}persons/userAvatar.png` : user.profilePicture;
+  const imageUrl = user.profilePicture === " " ?  `${PF}persons/userAvatar.png` : PF + user.profilePicture;
   const bannerImg = user.coverPicture === " " ?  `${PF}/nobannerimg.jpg` : user.coverPicture;
   return (
     <>

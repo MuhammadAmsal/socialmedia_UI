@@ -1,15 +1,18 @@
 import './post.css'
 import {MoreVert} from '@mui/icons-material'
-import { useState,useEffect } from 'react'
+import { useState,useEffect, useContext } from 'react'
 import axios from "axios"
 import {Link} from "react-router-dom"
 import {format} from "timeago.js"
+import { AuthContext } from '../../context/AuthContext'
 export default function Post({post}) {
 
-const [like,setLike]= useState(post.likes.lenght)
+const [like,setLike]= useState(post.likes.length)
 const [isLiked,setIsliked]= useState(false)
 const[user,setUser]=useState({})
 const PF = process.env.REACT_APP_PUBLIC_FOLDER
+const {user:currentUser} = useContext(AuthContext)
+console.log(post.likes.length);
 
 useEffect(()=>{
   const fetchUsers = async () => {
@@ -22,10 +25,16 @@ useEffect(()=>{
 },[post.userId])
 
 const likeHandler =()=>{
+try{
+   axios.put("/post/" + post._id +"/like", { userId: currentUser._id})
+}catch(err){
+
+}
+
   setLike(isLiked ? like-1 : like+1)
   setIsliked(!isLiked)
 }
-const imageUrl = user.profilePicture === " " ?  `${PF}persons/userAvatar.png` : user.profilePicture;
+const imageUrl = user.profilePicture === " " ?  `${PF}persons/userAvatar.png` : PF + user.profilePicture;
 // console.log(imageUrl);
   return (
     <div className='post' >
